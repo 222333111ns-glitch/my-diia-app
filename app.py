@@ -4,7 +4,8 @@ from fastapi.responses import HTMLResponse
 import aiosqlite
 import os
 import time
-
+os.makedirs("photos", exist_ok=True)
+os.makedirs("receipts", exist_ok=True)
 app = FastAPI()
 
 @app.get("/get_data")
@@ -91,4 +92,5 @@ async def main_page():
         </script>
     </body>
     </html>
+
     """
